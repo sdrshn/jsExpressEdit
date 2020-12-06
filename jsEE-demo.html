@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<script>
+</script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="karma.ico"> 
+ <script    src="./scripts/tool-man/core.js"></script>  
+<script    src="./scripts/tool-man/events.js"></script>  
+<script    src="./scripts/tool-man/css.js"></script>  
+<script    src="./scripts/tool-man/coordinates.js"></script>  
+<script    src="./scripts/tool-man/drag.js"></script>  
+<script    src="./scripts/tool-man/dragsort.js"></script> 
+<script  src="./scripts/jquery.min.js"></script>  
+<script    src="./scripts/jsexpressedit.js"></script>
+<script>
+var dragsort = ToolMan.dragsort();
+var junkdrawer = ToolMan.junkdrawer();
+
+function updateText(id){
+	var text=document.getElementById(id).value;
+	document.getElementById('trialdiv').innerHTML=text;
+	}
+</script>
+<style>
+.pastemsg {padding:20px 20px;}
+.altSubmit.updatetext{margin:40px 20px; text-align: center;}
+p,div {font-family:Helvitica,sans-serif;}
+div#trialdiv {margin-bottom:10px;}
+#trialdiv,textarea {text-align: left;padding:20px;font-size:15px;font-family:Helvitica;margin:10px 30px; min-height: 150px; }
+/*jsEE Editor styles*/
+.altUpdate,.altSubmit{float:left;cursor:pointer;margin: 0 5px; font-size:10px;padding:2px;-webkit-border-radius: 3px 3px 3px 3px;border-radius: 3px 3px 3px 3px;border: 1px solid black;background:#777;color:white;}
+div .altSubmit{background-color:#285a14;}
+.altEdTagText{float:left;}
+.altGoToIt{ background:#687867;color:#fff;}
+.altTagEdit{display:block;clear:both;}
+.altTagEnd{display:block;clear:both;}
+#gotoAltEditTop{font-size:10px;background-color:rgba(255, 0, 0, .15);cursor:pointer; z-index:10000000000; position:fixed;padding:0;margin:0;top:40%;border:navy 1px solid;left:10px;}
+.altCurImgSz{text-align:left;}
+.altImageSize{float:left;}
+.altEditorHtml .edit.text img {width:35px; height:auto;}
+.altEditorHtml .altEdRemove {float:left;cursor:pointer; margin-left:2%;margin-top:10px; font-family:cursive;padding:5px;font-size:12px;}
+.altEditorHtml select optgroup option,.altEditorHtml select optgroup{font-size:11px!important;}
+.altEditorHtml .altEdSource {float:left;cursor:pointer;margin-top:40px; margin-left:2%;font-family:cursive;padding:5px;font-size:12px;}
+.altEdText{float:left;color:#fef;clear:both;}
+.altImgTextAreaShow,.altIframeTextAreaShow,.altSourceTextAreaShow,.altTextAreaShow{margin:0 auto;display:block;width:95%;border:1px black solid; }
+.altIframeTextAreaShow textarea,.altTextAreaShow textarea,.altImgTextAreaShow textarea,.altSourceTextAreaShow textarea {text-align:left;width:95%;background:#687867;color:#fff;font-size: 14px; font-family:Helvitica, sans-serif;}
+.altEdActivateButton{float:left;background:grey;border:1px black solid; color:white; font-size:7px; font-family:oxygen; padding:3px; margin: 5px 5px; cursor:pointer;-webkit-border-radius: 3px 3px 3px 3px;border-radius: 3px 3px 3px 3px;}
+.altClassStyle{ background:#999;color:#222; padding:10px;-webkit-border-radius: 3px 3px 3px 3px;border-radius: 3px 3px 3px 3px;border: 1px solid black;}
+.altMultiStyle{ background:#999;color:#f; padding:10px;-webkit-border-radius: 3px 3px 3px 3px;border-radius: 3px 3px 3px 3px;border: 1px solid black;}
+ .altEditorHtml{position:absolute;z-index:1000000000000; width:100%; max-width:2000px;}
+.hide{display:none;}  
+.altEditNodes{border-bottom: solid #cbbbb9 1px; padding: 4px; display:block;clear:both;}
+.altEditElem{margin-left:25px; border-bottom: solid #cbbbbb 1px;padding: 4px; display:block;clear:both;}
+.altEdButton {float:left;background:#9c9c9c;border:1px black solid; color:white; font-size:10px; padding:3px; margin: 0 5px; cursor:pointer;}
+.altEditTitleContainer {position:relative;text-align:center;border-bottom: white 1px solid;padding-bottom:60px; }
+.altEditTitle{cursor:pointer;background:#dad3d3; color:#4d0d0d; border-bottom: 1px solid black; padding:4px 10px; font-size: 14px; display:inline-block; }
+.altSysEdit{border:solid maroon 1px;background:#afafaf;color:white;margin:15px; padding:20px; font-size: 16px; font-family:oxygen;text-align:left;}
+
+</style>	          
+<title> jsExpressEdit</title></head>
+<body><div>
+<form>
+<div id="editorHtml_444" class="altEditorHtml"></div> 
+ <div  class="altEdOptionShow"  onclick="jsExpressEdit.parseTextarea('trialdiv',444);"><p class="altEdActivateButton">jsEE</p></div>
+<div id="trialdiv" name="textthis2" ></div>
+<div class="altTextAreaShow pastemsg">Paste starter HTML in here or do it through the jsEE Source Edit option.
+<p class="altSubmit updatetext" title="click to update text changes" onclick="updateText('jsTextareaAdder');">Update&nbsp;Text&nbsp;Changes</p><textarea id="jsTextareaAdder" rows="7" onkeyup="jsExpressEdit.autoGrowFieldScroll(this);"></textarea></div> 
+
+ </form>
+</div>
+</body>
+</html>
