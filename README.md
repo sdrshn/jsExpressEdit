@@ -1,6 +1,6 @@
 
 /*
- *jsExpressEdit v1.10 - javascript parse Editor
+ *jsExpressEdit v1.10 - javascript based HTML Editor
  *
  * Author: Brian Hayes  
  *
